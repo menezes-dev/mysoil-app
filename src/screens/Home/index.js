@@ -1,7 +1,7 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerTitles}>
@@ -13,10 +13,17 @@ const Home = () => {
         </Text>
       </View>
       <View style={styles.containerButtons}>
-        <TouchableOpacity style={styles.button}>Botão 1</TouchableOpacity>
-        <TouchableOpacity style={styles.button}>Botão 2</TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("login")}
+        >
+          <Text style={styles.textButton}>Entrar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.textButton}>Criar Conta</Text>
+        </TouchableOpacity>
       </View>
-      <View>
+      <View style={styles.containerImage}>
         <Image source={require("../../assets/tree.png")} style={styles.image} />
       </View>
     </View>
