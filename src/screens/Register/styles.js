@@ -8,11 +8,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
 
-  imageArea: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
   infoArea: {
     alignItems: "center",
     justifyContent: "center",
@@ -22,23 +17,24 @@ const styles = StyleSheet.create({
     color: theme.colors.darkGreen,
     fontSize: 22,
     fontWeight: "bold",
+    marginTop: 20,
   },
 
-  loginArea: {
+  registerArea: {
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
     gap: 20,
   },
 
-  loginInput: {
+  registerInput: {
     width: "80%",
     padding: 10,
     borderColor: theme.colors.darkGreen,
     borderBottomWidth: 1,
   },
 
-  loginButton: {
+  registerButton: {
     width: "50%",
     alignItems: "center",
     justifyContent: "center",
@@ -48,37 +44,9 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
 
-  loginTextButton: {
+  registerTextButton: {
     color: theme.colors.white,
     fontSize: 20,
-    fontWeight: "bold",
-  },
-
-  socialLoginArea: {
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 20,
-  },
-
-  socialText: {
-    color: theme.colors.darkGreen,
-  },
-
-  socialOptions: {
-    flexDirection: "row",
-    gap: 20,
-  },
-
-  registerArea: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  registerText: {
-    color: theme.colors.darkGreen,
-  },
-
-  registerTextButton: {
     fontWeight: "bold",
   },
 });

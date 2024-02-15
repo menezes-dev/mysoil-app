@@ -19,7 +19,10 @@ const Home = ({ navigation }) => {
         >
           <Text style={styles.textButton}>Entrar</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("register")}
+        >
           <Text style={styles.textButton}>Criar Conta</Text>
         </TouchableOpacity>
       </View>

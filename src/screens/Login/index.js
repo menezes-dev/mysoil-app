@@ -1,17 +1,17 @@
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 import theme from "../../theme/theme";
+import Header from "../../components/Header";
+import Logo from "../../components/Logo";
+import { useContext } from "react";
+import { LoginContext } from "../../contexts/login.context";
 
 const Login = ({ navigation }) => {
+  const { setLogged } = useContext(LoginContext);
+
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.navigate("home")}>
-          <Text style={styles.buttonText}>Voltar</Text>
-        </TouchableOpacity>
-        <Image source={require("../../assets/earth.png")} />
-      </View>
-
+      <Header navigation={navigation} />
       <View style={styles.imageArea}>
         <Image source={require("../../assets/login.png")} />
       </View>
@@ -31,7 +31,12 @@ const Login = ({ navigation }) => {
           placeholder="Digite sua senha"
           placeholderTextColor={theme.colors.darkGreen}
         />
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={() => {
+            setLogged(true);
+          }}
+        >
           <Text style={styles.loginTextButton}>Entrar</Text>
         </TouchableOpacity>
       </View>
@@ -54,10 +59,7 @@ const Login = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.logoArea}>
-        <Image source={require("../../assets/earth.png")} />
-        <Text style={styles.logoText}>MySoil</Text>
-      </View>
+      <Logo />
     </View>
   );
 };
