@@ -11,6 +11,9 @@ import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useContext } from "react";
 import { LoginContext } from "./contexts/login.context";
 import Search from "./screens/Search";
+import Recomendation from "./screens/Recomendation";
+import LoadingPage from "./screens/LoadingPage";
+import Features from "./screens/Features";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -31,6 +34,16 @@ const AuthStack = () => {
       <Stack.Screen
         name="register"
         component={Register}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="recomendation"
+        component={Recomendation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="loading"
+        component={LoadingPage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
@@ -114,6 +127,33 @@ const AppTabs = () => {
                 size={35}
                 color={theme.colors.darkGreen}
                 name="search-circle-outline"
+              />
+            );
+          },
+          tabBarShowLabel: false,
+        }}
+      />
+
+      <Tab.Screen
+        name="features"
+        component={Features}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => {
+            if (focused) {
+              return (
+                <Ionicons
+                  size={30}
+                  color={theme.colors.darkGreen}
+                  name="pricetag"
+                />
+              );
+            }
+            return (
+              <Ionicons
+                size={30}
+                color={theme.colors.darkGreen}
+                name="pricetag-outline"
               />
             );
           },

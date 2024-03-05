@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 20,
-    borderBottomColor: theme.colors.black,
+    borderBottomColor: theme.colors.darkGreen,
     borderBottomWidth: 1,
     padding: 15,
     marginTop: 20,
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
 
   infoText: {
-    color: theme.colors.black,
+    color: theme.colors.darkGreen,
     fontSize: 20,
   },
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     gap: 20,
     padding: 20,
     borderRadius: 20,
-    backgroundColor: theme.colors.lightGreen,
+    backgroundColor: theme.colors.darkGreen,
   },
 
   certificationItem: {

@@ -30,11 +30,12 @@ const Login = ({ navigation }) => {
           style={styles.loginInput}
           placeholder="Digite sua senha"
           placeholderTextColor={theme.colors.darkGreen}
+          secureTextEntry
         />
         <TouchableOpacity
           style={styles.loginButton}
           onPress={() => {
-            setLogged(true);
+            navigation.navigate("recomendation");
           }}
         >
           <Text style={styles.loginTextButton}>Entrar</Text>
